@@ -11,7 +11,7 @@ const port = 5000;
 app.use(cors());
 app.use(express.json());
 
-app.get('/health', (req, res) => {
+app.get('/status', (req, res) => {
     res.send('OK');
 });
 
