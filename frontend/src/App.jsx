@@ -33,9 +33,11 @@ export const App = () => {
 
     setIsWaiting(true);
 
+    const API_URL = import.meta.env.VITE_API_URL;
+
     try {
       await new Promise((resolve) => setTimeout(resolve, 1000));
-      const response = await axios.post("http://localhost:5000/api/chat", {
+      const response = await axios.post(`${API_URL}/api/chat`, {
         message: Finalinput,
       });
       const botReply = {
