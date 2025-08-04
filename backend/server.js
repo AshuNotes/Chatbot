@@ -11,6 +11,10 @@ const port = 5000;
 app.use(cors());
 app.use(express.json());
 
+app.get('/health', (req, res) => {
+    res.send('OK');
+});
+
 app.post("/api/chat", async (req, res) => {
     const { message } = req.body;
 
